@@ -16,8 +16,14 @@ class Vehicle{
         int getYear(){
             return year;
         }
+        void setLP(std::string lp){
+            this->LicensePlate= lp;
+        }
         void setYear(int y){
             this->year= y;
+        }
+        void setWeight(double w){
+            this->weight= w;
         }
         // virtual Vehicle(std::string LicensePlate, int year, double weight) =0;
         virtual double calculateInspectionFee() =0;
@@ -33,7 +39,9 @@ class IMovable{
 class Motorbike : public Vehicle, IMovable{
     public:
     Motorbike(std::string LicensePlate, int year, double weight){
-
+        this->setLP(LicensePlate);
+        this->setWeight(weight);
+        this->setYear(year);
     }
     void Move() override{
         std::cout<<"xe may dang di chuyen"<<std::endl;
@@ -55,7 +63,9 @@ class Motorbike : public Vehicle, IMovable{
 class Car : public Vehicle,IMovable{
     public:
     Car(std::string LicensePlate, int year, double weight){
-
+        this->setLP(LicensePlate);
+        this->setWeight(weight);
+        this->setYear(year);
     }
     void Move() override{
         std::cout<<"xe o to dang di chuyen"<<std::endl;
@@ -80,6 +90,9 @@ class Bus : public Vehicle,IMovable{
     Bus(std::string LicensePlate, int year, double weight,int s){
         this->s=s;
         this->setYear(year);
+        this->setLP(LicensePlate);
+        this->setWeight(weight);
+        // this->setYear(year);
     }
     void Move() override{
         std::cout<<"xe buyt dang di chuyen"<<std::endl;
