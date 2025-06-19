@@ -6,6 +6,11 @@ public class Test {
         manager.AddItem(new Produce(0, "kem", 15));
         manager.AddStaff(new Staff(0,"Kieu Tung"));
 
-        manager.Display();
+        // manager.Display();
+
+        manager.GetStaffByID(0).getStaffName();
+
+        Staff staff1 = manager.GetStaffByID(1);
+        staff1.InfoStaff();
     }
 }

@@ -9,8 +9,8 @@ public class TestSkill {
         Nhanvat1 = new Mage("Kaine", 10, 100, 40);
         nhanvat2 = new Assassin("Aya", 5, 100, 10);
         nhanvat3 = new Warrior("Thane", 8, 1000, 60);
-        Nhanvat1.Attack(nhanvat2);
-        Nhanvat1.Attack(nhanvat3);
+        ((ISkillUser)Nhanvat1).UseSkill(nhanvat2);
+        ((ISkillUser)Nhanvat1).UseSkill(nhanvat3);
     }
 }
 

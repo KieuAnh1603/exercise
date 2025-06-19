@@ -10,13 +10,12 @@ public class Warrior extends GameCharacter implements ISkillUser{
     @Override
     public void UseSkill(GameCharacter target) {
         System.out.println("Skill Chem manh");
-
+        this.Attack(target);
     }
 
     @Override
     public void Attack(GameCharacter target) {
-        System.out.println("Dame = " + (30+getLevel()));
-        System.out.println("Giap hien tai: "+ armor);
+        target.TakeDamage(150);
     }
 
     @Override

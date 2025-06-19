@@ -12,13 +12,12 @@ public class Assassin extends GameCharacter implements ISkillUser{
     @Override
     public void UseSkill(GameCharacter target) {
         System.out.println("Skill Dam sau lung");
+        this.Attack(target);
     }
 
     @Override
     public void Attack(GameCharacter target) {
-         if(criticalChance/2 ==0){
-            System.out.println("Dame = x2");
-        }
+        target.TakeDamage(100 + criticalChance);
     }
 
     @Override

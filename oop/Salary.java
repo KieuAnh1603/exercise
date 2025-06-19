@@ -10,4 +10,8 @@ public class Salary {
     public double payroll(float hourWork) {
         return  hourWork * perHour;
     }
+
+    public float getPerHour() {
+        return perHour;
+    }
 }

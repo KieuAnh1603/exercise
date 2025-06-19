@@ -24,5 +24,22 @@ public abstract class GameCharacter {
     public int getHealth() {
         return health;
     }
+
+    public void setHealth(int health) {
+        this.health = health;
+    }
+
+    public void TakeDamage(int damage) {
+        if (getHealth() <= 0) {
+            System.out.println(getName() + " da chet.");
+            return;
+        }
+        int newHealth = getHealth() - damage;
+        if (newHealth < 0) {
+            newHealth = 0;
+        }
+
+        setHealth(newHealth);
+    }
     // public
 }

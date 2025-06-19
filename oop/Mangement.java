@@ -38,4 +38,13 @@ public class Mangement implements IManager {
         return staffsList.get(index);
     }
     
+    public double CaculatorSalary() {
+        double tongluong = 0;
+
+        for (Staff tempStaff : staffsList) {
+            tongluong += tempStaff.getStaffSaraly();
+        }
+
+        return tongluong;
+    }
 }

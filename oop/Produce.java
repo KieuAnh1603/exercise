@@ -28,6 +28,6 @@ public class Produce {
     public void Display() {
         System.out.println("ID: " + this.produceId);
         System.out.println("Name: " + this.produceName);
-        System.out.println("Cost: " + this.produceCost);
+        System.out.println("Cost: " + this.produceCost.getPerHour());
     }
 }

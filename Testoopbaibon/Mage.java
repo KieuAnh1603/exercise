@@ -11,12 +11,20 @@ public class Mage extends GameCharacter implements ISkillUser{
 
     @Override
     public void UseSkill(GameCharacter target) {
-        System.out.println("Skill Fire ball");
+        // auto user skill se tru 20 mana
+        if (mana < 20) {
+            System.out.println("Khong du mana de su dung skill");
+            return;
+        }
+        mana -= 20;
+        System.out.println("Skill Fireball");
+        this.Attack(target);
     }
 
     @Override
     public void Attack(GameCharacter target) {
         System.out.println("Dang tan cong: "+ target.getName());
+        target.TakeDamage(50);
     }
 
     @Override
